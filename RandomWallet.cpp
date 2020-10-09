@@ -88,7 +88,7 @@ while (w_cnt == 1) {
         w_cnt = 1;
     }
     loop_cnt++;
-// }
+}
 cout << '\n' << loop_cnt << endl;
 
 return 0;
