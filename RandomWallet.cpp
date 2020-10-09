@@ -10,7 +10,7 @@
 using namespace std;
 
 int main() {
-// /* Get a random bitstring as an input.txt from the user
+/* Get a random bitstring as an input.txt from the user
     string line;
     ifstream myfile ("RandomBitString.txt");
     if (myfile.is_open()){
@@ -30,27 +30,27 @@ int main() {
     //    cout << bit_str[i];
    }
    cout << "\n";
-// */
+*/
 
-int w_cnt = 0;
+int w_cnt = 1;
 int loop_cnt = 0;
-// while (w_cnt == 0) {
+while (w_cnt == 1) {
     // Pseudorandom Number Generation
-    // const int l_str = 256; // bitstring length
-    // bool bit_str[l_str]; // bitstring
+    const int l_str = 256; // bitstring length
+    bool bit_str[l_str]; // bitstring
     
     // srand((unsigned) time(0)); // Ordinary PRNG
     
     // Cryptographically Secure Pseudorandom Number Generator (CSPRNG)
-    // uniform_int_distribution<int> d(0, 1); // CSPRNG
-    // random_device rd2("/dev/random"); // CSPRNG, much slower on Linux
+    uniform_int_distribution<int> d(0, 1); // CSPRNG
+    random_device rd2("/dev/random"); // CSPRNG, much slower on Linux
 
     int R = 1; // number of runs
     int n_1 = 0; // number of ones
     for (int i = 0; i < l_str; i++) {
 
         // bit_str[i] = rand() % 2; // Ordinary PRNG
-        // bit_str[i] = d(rd2); // CSPRNG 
+        bit_str[i] = d(rd2); // CSPRNG 
 
         printf("%d", bit_str[i]);
         if ((i+1) % 64 == 0) {
